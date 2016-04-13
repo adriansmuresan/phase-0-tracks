@@ -1,0 +1,30 @@
+Personal Robot
+
+Go in front of the elevator and push the button to call the elevator
+When the elevator comes and the doors open enter the elevator
+Look on the ride side of the door for a control panel
+-if there is no cotrol panel on the right side look on the left side
+After locating the control panel ask me wich floor am I going
+After I tell you my floor number
+- look on the control panel for a maching number
+    -if you find the matching number press the button with the coresponding number
+    -if you can't find the number ask me again for a different number : do this 3 times
+    -if none of the number matches press the "Lobby" button 
+When a matching number is selected sit back and enjoy the ride( listen the "inspiring elevator music")
+When doors open walk out the elevator.
+
+
+Making a cup of tea
+
+-pick up the kettle and go to the sink
+-turn on the foset
+-fill the kettle with wather until the max line and above the min line
+-walk to the stove and place the kettle on one of the burners
+-turn on the stove with coresponding burner
+-when the kettle starts to wistle turn off the stove
+-pick up the kettle and walk to the cabinet
+-pick a cup from the cabinet and place it on the countertop
+-fill the cup with wather from the kettle
+-take a tea bag from the cabinet and place it in the cup
+-wait 5 minutes
+-enjoy an aromatic cup of Tea
