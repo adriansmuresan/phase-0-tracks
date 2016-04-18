@@ -1,4 +1,3 @@
-
 puts "How many employees will be processed?"
 employee_number = gets.chomp.to_i
 
@@ -76,5 +75,6 @@ current_year = age + born_year
 end
 
 puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
+
 
 
