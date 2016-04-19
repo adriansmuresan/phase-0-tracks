@@ -4,29 +4,54 @@
 # When there's more than one suspect who could have
 # committed the crime, add additional calls to prove it.
 
-# “iNvEsTiGaTiOn”.<???>
+
+
+“iNvEsTiGaTiOn”.swapcase
+
 # => “InVeStIgAtIoN”
 
-# “zom”.<???>
+
+
+ “zom”.insert(2, 'o')
+
 # => “zoom”
 
-# “enhance”.<???>
+
+
+ “enhance”.center(15)
+
 #=> “    enhance    ”
 
-# “Stop! You’re under arrest!”.<???>
+
+
+ “Stop! You’re under arrest!”.upcase
+
 # => “STOP! YOU’RE UNDER ARREST!”
 
-# “the usual”.<???>
+
+
+ “the usual” << " suspects"
+
 #=> “the usual suspects”
 
-#“ suspects”.<???>
+
+
+s = “ suspects”
+s.insert(0, "the usual")
+s
 #=> “the usual suspects”
 
-# “The case of the disappearing last letter”.<???>
+
+
+ “The case of the disappearing last letter”.chop
+
 # => “The case of the disappearing last lette”
 
-# “The mystery of the missing first letter”.<???>
+ “The mystery of the missing first letter”[1..-1]
+
 # => “he mystery of the missing first letter”
+
+
 
 # “Elementary  ,    my   dear      Watson!”.<???>""
 # => “Elementary, my dear Watson!”
