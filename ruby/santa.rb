@@ -109,4 +109,4 @@ example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer n
 
 puts "How many santas are you capable to endure?"
  nmbr_of_santas = gets.chomp.to_i
- nmbr_of_santas.times {Santa.new(example_genders.sample, example_genders.sample, [*1..100].sample)}
+ nmbr_of_santas.times {Santa.new}
