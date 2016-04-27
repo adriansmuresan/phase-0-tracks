@@ -1,5 +1,7 @@
 #6.2 Mandatory Pairing: Instance Methods
 
+# initialize a Puppy class
+# add methods to the class and call them in driver code
 
 class Puppy
 
@@ -15,7 +17,7 @@ class Puppy
   def roll_over
     puts "*roll over*"
   end
-  
+
   def dog_years(h)
     if h.to_i < 3
       d = h.to_i * 10
@@ -44,7 +46,9 @@ fido.dog_years(2)
 fido.shake(5)
 
 # Release 2===============================================
-
+# initialize a class of our choosing
+# create 50 instances of the class and store them in an array
+# iterate through the array and call the methods for the class.
 
 class Cats
 
