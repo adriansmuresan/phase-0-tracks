@@ -5,10 +5,10 @@ def create_list(string, default=1)
   # input: string of items separated by spaces (example: "carrots apples cereal pizza")
 # steps:
 # take a string and break it into an array
-
-  grocery_list = string.split(' ')
 # set default quantity
 # create a hash with a method to translate the arrays into keys and values
+  
+  grocery_list = string.split(' ')
   grocery_hash = Hash.new
   grocery_list.each do |x|
     grocery_hash[x] = 1
