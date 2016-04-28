@@ -4,11 +4,11 @@ class Santa
    attr_reader :age, :ethnicity
    attr_accessor :gender
 
-  def initialize(gender,ethnicity,age)
+  def initialize(gender,ethnicity)
     @gender = gender
     @ethnicity = ethnicity
     @reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-    @age = age
+    @age = rand(140)
     puts "Initializing Santa instance..."
   end
 
@@ -44,7 +44,9 @@ class Santa
 #    def ethnicity
 #      @ethnicity
 #    end
-
+   def santa_profile
+       puts "This santa is #{@gender}, #{@ethnicity} and #{@age} years old."
+   end
 end
 
 #Driver code==========
@@ -109,4 +111,4 @@ example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer n
 
 puts "How many santas are you capable to endure?"
  nmbr_of_santas = gets.chomp.to_i
- nmbr_of_santas.times {Santa.new}
+ nmbr_of_santas.times {Santa.new(example_genders.sample, example_ethnicities.sample).santa_profile}
