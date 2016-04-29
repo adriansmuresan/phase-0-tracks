@@ -27,33 +27,24 @@ class Rollercoaster
   attr_reader :roll_name
   attr_accessor :user_name, :age, :height
 
-  def initialize(name, age, height, weight)
-    @age = age
-    @user_name = name
-    @height = height
-    @weight = weight
+  def initialize(name, age, height)
+    @age = age.to_i
+    @user_name = name.capitalize
+    @height = height.to_i
     @roll_name =["Kingda Ka","Top Thrill Dragster","Superman: Escape from Krypton", "Tower of Terror II", "Fury 325", "Steel Dragon 2000", "Millennium Force"]
     puts "Ready for a rollercoaser ryde?"
   end
 
   def age_verification(age)
-    if @age >  5
+    if age >  5
       puts "Enjoy the ride!"
     else
-      puts "I'm sorry you can not ride the rollercoster, maybe next year!"
+      puts "I'm sorry you can't ride the rollercoster, maybe next year!"
     end
   end
 
   def height_verification(height)
-     if @height < 4 feet
-       puts "Not suitable for this ride!"
-     else
-       puts "Enjoy the ride!"
-     end
-   end
-
-   def weight_verification(weight)
-     if @weight > 250 pounds
+     if height < 3
        puts "Not suitable for this ride!"
      else
        puts "Enjoy the ride!"
@@ -73,3 +64,13 @@ class Rollercoaster
 #  Store these class instances in an array.
 #  When the user indicates that they are finished creating instances,
 #  loop through the array and print out the attributes of each instance as a confirmation message of what was created.
+
+#  testing
+
+roll1=Rollercoaster.new("adi", 34, 180)
+p roll1.user_name
+p roll1.age
+p roll1.height
+roll1.age_verification(4)
+roll1.height_verification(6)
+roll1.rollercoster_picker("adi", "Kingda Ka")
