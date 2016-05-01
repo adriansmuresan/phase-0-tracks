@@ -31,12 +31,12 @@ class Rollercoaster
     @age = age.to_i
     @user_name = name.capitalize
     @height = height.to_i
-    @roll_name =["Kingda Ka","Top Thrill Dragster","Superman: Escape from Krypton", "Tower of Terror II", "Fury 325", "Steel Dragon 2000", "Millennium Force"]
-    puts "Ready for a rollercoaser ryde?"
+    @roll_name =["Kingda Ka","Superman", "Tower of Terror", "Fury", "Steel Dragon", "Millennium Force"]
+    puts "Rollercoaster madness!"
   end
 
   def age_verification(age)
-    if age >  5
+    if @age >  5
       puts "Enjoy the ride!"
     else
       puts "I'm sorry you can't ride the rollercoster, maybe next year!"
@@ -44,7 +44,7 @@ class Rollercoaster
   end
 
   def height_verification(height)
-     if height < 3
+     if @height < 3
        puts "Not suitable for this ride!"
      else
        puts "Enjoy the ride!"
@@ -52,8 +52,12 @@ class Rollercoaster
    end
 
    def rollercoster_picker(name, roll_name)
-     puts "#{name} pick the Rollercoaster that you want to ride!"
+     puts "#{user_name}, #{age} pick the Rollercoaster that you want to ride!"
      puts "#{roll_name} is a great choice, come back again!"
+   end
+
+   def all_rides
+     puts "Your name is #{user_name} are #{age} years old, #{height} feet tall and you have enjoied #{roll_name.sample}!"
    end
  end
 
@@ -65,12 +69,30 @@ class Rollercoaster
 #  When the user indicates that they are finished creating instances,
 #  loop through the array and print out the attributes of each instance as a confirmation message of what was created.
 
-#  testing
+# Testing
 
-roll1=Rollercoaster.new("adi", 34, 180)
-p roll1.user_name
-p roll1.age
-p roll1.height
-roll1.age_verification(4)
-roll1.height_verification(6)
-roll1.rollercoster_picker("adi", "Kingda Ka")
+# roll1 = Rollercoaster.new("adrian", 34, 2)
+# p roll1.user_name
+# p roll1.age
+# p roll1.height
+# roll1.age_verification(4)
+# roll1.height_verification(6)
+# roll1.rollercoster_picker("adi", "Kingda Ka")
+
+# User interface
+
+rollercoaster = []
+
+puts "How many rollercoasters would you like to ride?"
+ nmbr_of_rides = gets.chomp.to_i
+ nmbr_of_rides.times do
+   puts "Plese enter your information:(name, age and height)"
+    user_name = gets.chomp.capitalize
+    age = gets.chomp.to_i
+    height = gets.chomp.to_i
+    rollercoaster << Rollercoaster.new(user_name, age, height)
+  end
+
+rollercoaster.each do |ride|
+  ride.all_rides
+end
