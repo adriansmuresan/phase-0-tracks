@@ -76,5 +76,20 @@ function Compare(obj1, obj2) {
 }
 
 // =======Driver code===============
-console.log(Compare({name:'Adrian', age:'35', location:'Chicago'}, {name:'Chris', age:'28',location:'Chicago'}))
-console.log(Compare({name:'Adrian', age:'35', location:'Chicago'}, {name:'Adrian', age:'35',location:'Chicago'}))
+console.log(Compare({name:'Adrian', age:'35', location:'Chicago'}, {name:'Chris', age:'28',location:'Chicago'})) //returns false
+console.log(Compare({name:'Adrian', age:'35', location:'Chicago'}, {name:'Adrian', age:'35',location:'Chicago'})) //returns true
+
+// ===========Release 2: Generate Random Test Data==================
+
+// Write a function that takes an integer for length, and builds and returns an array of strings of the given length.
+// So if we ran your function with an argument of 3, we would get an array of 3 random words back (the words don't have to be actual sensical English words -- "nnnnfph" totally counts).
+// The words should be of randomly varying length, with a minimum of 1 letter and a maximum of 10 letters.
+// (This involves a new trick, generating a random number, that you'll have to look up, but the solution on how to do so is relatively straightforward.)
+// Add driver code that does the following 10 times: generates an array, prints the array, feeds the array to your "longest word" function, and prints the result.
+//
+// ============Pseudocode=========
+
+// create a function that takes input an integer for argument
+// create an array that stores some strings of given length( integer = string_length)
+// create a loop that makes an amount of words with length between 1 and 10
+// take the words created and add them to an array
