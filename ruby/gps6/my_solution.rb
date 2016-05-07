@@ -25,6 +25,9 @@ class VirusPredictor
 
   def predicted_deaths
     # predicted deaths is solely based on population density
+
+# Original code
+
     #if @population_density >= 200
     #  number_of_deaths = (@population * 0.4).floor
    # elsif @population_density >= 150
@@ -37,7 +40,7 @@ class VirusPredictor
     #  number_of_deaths = (@population * 0.05).floor
    # end
 
-# Refractored solution
+# Refactored solution
     number_of_deaths = (@population * 0.05).floor
 
     number_of_deaths = (@population * 0.4).floor if @population_density >= 200
@@ -53,7 +56,7 @@ class VirusPredictor
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
    # speed = 0.0
-
+# Original code
   #if @population_density >= 200
   #  speed += 0.5
   #elsif @population_density >= 150
@@ -66,7 +69,7 @@ class VirusPredictor
   #  speed += 2.5
   #end
 
-# Refractored solution
+# Refactored solution
   speed = 2.5
 
   speed = 2 if @population_density >= 50
