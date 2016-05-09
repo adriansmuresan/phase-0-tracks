@@ -93,3 +93,34 @@ console.log(Compare({name:'Adrian', age:'35', location:'Chicago'}, {name:'Adrian
 // create an array that stores some strings of given length( integer = string_length)
 // create a loop that makes an amount of words with length between 1 and 10
 // take the words created and add them to an array
+
+
+function generate_test(integer) {
+   var arrayofStrings = [];   //create an array to store the generated strings
+
+   for (var i = 0; i < integer; i++) {   //loop until the specified amount of words are crested
+     var rand_word = "";
+     num = Math.floor((Math.random()*10)+1);
+     for (var y = 0; y < num; y++) {
+       alphabet = "abcdefghijklmnopqrstuvwxyz";
+       var letter = alphabet[Math.floor((Math.random()*26)+0)]
+			  rand_word += letter
+     }
+     arrayofStrings.push(rand_word)
+   }
+   return arrayofStrings
+}
+
+//=======Driver code=========
+console.log(generate_test(3))
+console.log(generate_test(4))
+console.log(generate_test(9))
+//
+
+for (var a = 0; a < 10; a++){
+  var integer = Math.floor((Math.random()*10)+2)
+  var newArr = generate_test(integer)
+  console.log(newArr)
+  var newlongestWord = longestWord(newArr)
+  console.log(newlongestWord)
+}
