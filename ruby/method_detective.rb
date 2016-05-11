@@ -21,7 +21,9 @@ p result
 
 
  result2 = 'enhance'.center(15)
+ s = "enhance".ljust(12).rjust(17)
  p result2
+ p s
 
 #=> “    enhance    ”
 
@@ -35,7 +37,9 @@ p result
 
 
  result4 = 'the usual' << ' suspects'
+ s = "the usual".concat(' suspects')
  p result4
+ p s
 
 #=> “the usual suspects”
 
@@ -57,6 +61,7 @@ p result5
 
 
  result6 = 'The mystery of the missing first letter'[1..-1]
+# result6  = "The mystery of the missing first letter".delete"T"
  p result6
 
 # => “he mystery of the missing first letter”
@@ -73,7 +78,7 @@ p result5
 
 result8 = 'z'.ord
 p result8
-# => 122 
+# => 122
 # (What is the significance of the number 122 in relation to the character z?)
 # in ASCII code 122 is the numerical representation of the character "z"
 
