@@ -1,4 +1,4 @@
-#Challenge 5.2 
+#Challenge 5.2
 
 # At the top of your file, add a method that takes three items as parameters and returns an array of those items. So build_array(1, "two", nil) would return [1, "two", nil].
 # This won't take much code, but the syntax might feel a bit odd. At the bottom of the file, call the method to show that it works.
@@ -62,4 +62,5 @@ add_to_array(["a", "b", "c", 1, 2], 3)
 add_to_array([], "a")
 
 add_to_array([1,2,3], 3)
+
 add_to_array(["red", "blue", "yellow"], "orange")
