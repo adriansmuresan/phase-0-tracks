@@ -6,6 +6,7 @@
 
 
 
+
 result = 'iNvEsTiGaTiOn'.swapcase
 p result
 
@@ -73,7 +74,8 @@ p result5
 
 result8 = 'z'.ord
 p result8
-# => 122 
+
+# => 122
 # (What is the significance of the number 122 in relation to the character z?)
 # in ASCII code 122 is the numerical representation of the character "z"
 
@@ -81,5 +83,4 @@ p result8
 
 result9 = 'How many times does the letter "a" appear in this string?'.count"a"
 p result9
-
 #=> 4
