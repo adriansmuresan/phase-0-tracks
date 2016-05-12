@@ -22,7 +22,9 @@ p result
 
 
  result2 = 'enhance'.center(15)
+ s = "enhance".ljust(12).rjust(17)
  p result2
+ p s
 
 #=> “    enhance    ”
 
@@ -36,7 +38,9 @@ p result
 
 
  result4 = 'the usual' << ' suspects'
+ s = "the usual".concat(' suspects')
  p result4
+ p s
 
 #=> “the usual suspects”
 
@@ -58,6 +62,7 @@ p result5
 
 
  result6 = 'The mystery of the missing first letter'[1..-1]
+# result6  = "The mystery of the missing first letter".delete"T"
  p result6
 
 # => “he mystery of the missing first letter”
@@ -83,4 +88,5 @@ p result8
 
 result9 = 'How many times does the letter "a" appear in this string?'.count"a"
 p result9
+
 #=> 4

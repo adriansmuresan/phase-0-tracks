@@ -1,56 +1,65 @@
-#At the top of your file, add a method that takes an array and an item as parameters, and returns the array with the item added. So add_to_array([], "a") would return ["a"], and add_to_array(["a", "b", "c", 1, 2], 3) would return ["a", "b", "c", 1, 2, 3]. Print a few test calls of the method.
-def method_2(arg, arg1)
-  numbers = arg.push(arg1)
-  
+#Challenge 5.2 
+
+# At the top of your file, add a method that takes three items as parameters and returns an array of those items. So build_array(1, "two", nil) would return [1, "two", nil].
+# This won't take much code, but the syntax might feel a bit odd. At the bottom of the file, call the method to show that it works.
+def build_array(item1, item2, item3)
+  ary4 = [item1, item2, item3]
+  p ary4
 end
 
-#At the top of your file, add a method that takes three items as parameters and returns an array of those items. So build_array(1, "two", nil) would return [1, "two", nil]. This won't take much code, but the syntax might feel a bit odd. At the bottom of the file, call the method to show that it works.
-def new_method(x, y, z)
-  build_array = [x, y, z]
-  
+# At the top of your file, add a method that takes an array and an item as parameters, and returns the array with the item added.
+# So add_to_array([], "a") would return ["a"], and add_to_array(["a", "b", "c", 1, 2], 3) would return ["a", "b", "c", 1, 2, 3].
+# Print a few test calls of the method.
+
+
+def add_to_array(array_2, new_item)
+  ary4 = array_2.push new_item
+  p ary4
 end
 
-# Initialize an empty array and store it in a variable (you can choose the name). Print the variable using p.  
-cars = []
+#initialize an empty array and print array
+ary1 = []
+p ary1
 
-p cars
-# Add five items to your array. Print the array.
+#add 5 items to your array and print array
+ary1 = ["yarn", "stuffed mouse", "laser pointer", "headphone cord", "shoelace"]
+p ary1
 
-cars = ["ford", "chevy", "porche", "toyota", "honda"]
-p cars
+#delete the item at index 2
+ary1.delete_at(2)
+p ary1
 
-# Delete the item at index 2. Print the array.
-cars.delete_at(2)
-p cars
+#insert new item at index
+ary1.insert(2, "new item")
+p ary1
 
-# Insert a new item at index 2. Print the array.
-cars.insert(2, "porche")
-p cars
-# Remove the first item of the array without having to refer to its index. Print the array.
-cars.shift
-p cars
+#remove the first item in the array without having to refer to the index
+ary1.shift
+p ary1
 
-# Ask the array whether it includes a certain item. Print the result of this method call (labeled so it prints as more than just an isolated boolean value without any context.)
-puts "Does the array cars contain ford?"
-if cars.include?("ford") == true
-  puts "it contains a ford"
-  else
-  puts "it does not contain a ford"
+#ask the array whether it include a certain item
+if ary1.include?("new item")
+    puts "This array includes the string 'new item'"
+else
+    puts "This array doesn't include the string 'new item'"
 end
 
-# Initialize another array that already has a few items in it.
-more_cars = ["bmw", "audi", "vw", "lexus"]
-p more_cars
+#Initialize another array that already has a few items in it.
+ary2 = ["item1", "item2", "item3"]
 
-# Add the two arrays together and store them in a new variable. Print the new array.
-new_list_of_cars = cars.concat(more_cars)
-p new_list_of_cars
+#add two arrays together and store in a new variable
+ary3 = ary1 + ary2
+p ary3
 
+#other option to add the two arrays together
+ary3 = ary1.concat ary2
+p ary3
 
-p  new_method(2, 4, 7)
+build_array(1, "two", nil)
 
+add_to_array(["a", "b", "c", 1, 2], 3)
 
-p method_2([],"a" )
-p method_2(["a", "b", "c", 1, 2], 3)
+add_to_array([], "a")
 
-
+add_to_array([1,2,3], 3)
+add_to_array(["red", "blue", "yellow"], "orange")
