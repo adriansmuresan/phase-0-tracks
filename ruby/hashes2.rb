@@ -13,12 +13,6 @@
 # Prompt the designer/user for all of this information.
 # Convert any user input to the appropriate data type.
 # Print the hash back out to the screen when the designer has answered all of the questions.
-# Give the user the opportunity to update a key (no need to loop, once is fine). After all, sometimes users make mistakes!
-# If the designer says "none", skip it. But if the designer enters "decor_theme" (for example),
-# your program should ask for a new value and update the :decor_theme key.
-# (Hint: Strings have methods that will turn them into symbols, which would be quite handy here.)
-# You can assume the user will correctly input a key that exists in your hash -- no need to handle user errors.
-# Print the latest version of the hash, and exit the program.
 
 #Ask the user for the appropriate information
 puts "Enter the details of your client!"
@@ -34,7 +28,7 @@ puts "How many children do you have?"
  nmbr_children = gets.chomp.to_i
 
 puts "What decor theme do you prefer?"
- decor_theme = gets.chomp.to_s
+ decor_theme = gets.chomp.to_s.capitalize
 
 puts "Do you like hardwood floors?(yes/no)"
     hard_floors = gets.chomp
@@ -61,3 +55,27 @@ user_data = {
 # Print the hash back to the screen
 
 user_data.each {|k, v| print "#{k} => #{v}\n"}
+
+# Give the user the opportunity to update a key (no need to loop, once is fine). After all, sometimes users make mistakes!
+# If the designer says "none", skip it. But if the designer enters "decor_theme" (for example),
+# your program should ask for a new value and update the :decor_theme key.
+# (Hint: Strings have methods that will turn them into symbols, which would be quite handy here.)
+# You can assume the user will correctly input a key that exists in your hash -- no need to handle user errors.
+# Print the latest version of the hash, and exit the program.
+
+puts "Would you like to update some of your information? Please enter a key('none' if don't)"
+   key = gets.chomp.to_sym.capitalize
+
+puts "Please enter the new data/value for this key"
+  value = gets.chomp.capitalize
+
+
+  if key == :none
+    puts "Thank you come back again!"
+  else
+    new_data = {key => value}
+    user_data.merge!(new_data)
+  end
+
+puts "This is new hash with the new user data:"
+p user_data
