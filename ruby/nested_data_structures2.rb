@@ -18,16 +18,28 @@ library = {
                  Vampires: ["Dracula","'Salem's Lot", "Interview with the Vampire"],
                  Best_Sellers: ["It: A Novel", "The Shining", "Slade House"],
                  Classics: ["Carrie", "Frankenstein","Uncle Silas"],
+                  },
+          Sci_fi_fiction: {
+                         Fantasy_fiction: ["Harry Potter", "A game of thrones"],
+                         Thrillers: ["End of Watch","The Girl on the Train", "Gone Girl"],
+                           },
 
-      },
-      Sci_fi_fiction: {
-                    Fantasy_fiction: ["Harry Potter", "A game of thrones"],
-                    Thrillers: ["End of Watch","The Girl on the Train", "Gone Girl"],
-      },
-
-  },
+            },
   Award_winers: ["Between the World and Me", "Fortune Smiles","Refund", "Fates and Furies"],
 }
 
 # Once you've built it, print a few individual pieces of deeply nested data from the structure, showing that you know how to use multiple
 # indexes or hash keys (or both) to access nested items. Try to demonstrate a few different types of access.
+ p library[:History][:World_hystory]
+
+ p library[:Fiction][:Horror][:Classics]
+
+ p library[:Award_winers][2]
+
+ p library[:Fiction][:Sci_fi_fiction][:Fantasy_fiction].push("Breathless")
+
+ p library[:Fiction][:Horror][:Vampires].length
+
+ p library[:Biography] = ("Alexander Hamilton")
+
+ p library
