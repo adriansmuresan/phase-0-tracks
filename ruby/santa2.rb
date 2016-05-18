@@ -15,7 +15,29 @@ class Santa
   def eat_milk_and_cookies(cookie)
     puts "That was a good #{cookie}!"
   end
+
+  def celebrate_birthday
+    @age += 1
+  end
+
+  def get_mad_at(reindeer_name)
+    @reindeer_ranking.delete(reindeer_name)
+    @reindeer_ranking << reindeer_name
+  end
+  # Setter method
+  def gender=(new_gender)
+    @gender = new_gender
+  end
+
+  # Getter methods
+  def age
+    @age
+  end
+  def ethnicity
+    @ethnicity
+  end
 end
+
 # Driver code
 # santa = Santa.new
 # santa.speak
@@ -43,3 +65,23 @@ end
  santas << Santa.new("gender fluid", "Mystical Creature (unicorn)")
  santas << Santa.new("N/A", "N/A")
  p santas
+
+santas.each do |santa|
+  puts santa.celebrate_birthday
+end
+
+santas.each do |santa|
+  puts santa.get_mad_at("Vixen")
+end
+
+santas.each do |santa|
+  santa.gender=("bigender")
+end
+
+santas.each do |santa|
+  puts santa.age
+end
+
+santas.each do |santa|
+  puts santa.ethnicity
+end
