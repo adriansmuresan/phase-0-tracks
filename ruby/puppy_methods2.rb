@@ -1,3 +1,8 @@
+# 6.2 Mandatory Pairing: Instance Methods
+
+# initialize a Puppy class
+# add methods to the class and call them in driver code
+
 class Puppy
 	def initialize
 		puts "Initializing new puppy instance..."
@@ -42,6 +47,11 @@ fido.roll_over
 fido.dog_years(7)
 ​
 fido.shake_paw(3)
+
+# Release 2===============================================
+# initialize a class of our choosing
+# create 50 instances of the class and store them in an array
+# iterate through the array and call the methods for the class.
 ​
 class Extreme_Sports
 	def initialize
@@ -64,6 +74,8 @@ surfing.jump(3)
 sports_array = []
 ​
 counter = 0
+
+#make 50 instances of the class
 
 while counter < 50
 	mountain_climbing = Extreme_Sports.new 
