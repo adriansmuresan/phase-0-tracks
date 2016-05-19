@@ -18,4 +18,40 @@
 # Methods
    # A method that verifies the age
    # A method that chouses a random genres
-   # A method that asks the user if he whants popcorn   
+   # A method that asks the user if he whants popcorn
+
+class Movies
+  attr_reader :genres
+  attr_accessor :age, :name, :popcorn
+
+  def initialize(name, age)
+    puts "We have a few movie screenings for you today!"
+    @name = name
+    @age = age
+    @genres = ["action", "adventure", "drama", "romance", "comedy", "westerns", "thrillers"]
+    @popcorn = popcorn
+  end
+
+  def age_verification
+    if @age >= 16
+      puts "Ennjoy the screening of this movie!"
+    else
+      puts "We are sorry but this movie is not suitable for you at this time!"
+    end
+  end
+
+  def random_movie
+    puts "#{name} today  you are going to be screening a/an #{@genres.sample}!"
+  end
+
+  def popcorn
+    puts "#{name} for your pleasure this screening comes with complementary popcorn!"
+  end
+end
+# driver code
+movie = Movies.new("adrian", 12)
+p movie.age
+p movie.name
+p movie.age_verification
+p movie.random_movie
+p movie.popcorn
