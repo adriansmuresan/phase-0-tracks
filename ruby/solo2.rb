@@ -22,14 +22,13 @@
 
 class Movies
   attr_reader :genres
-  attr_accessor :age, :name, :popcorn
+  attr_accessor :age, :name
 
   def initialize(name, age)
     puts "Movies are fun!"
     @name = name
     @age = age
     @genres = ["action", "adventure", "drama", "romance", "comedy", "western", "thriller"]
-    @popcorn = popcorn
   end
 
   def age_verification
@@ -41,25 +40,28 @@ class Movies
   end
 
   def random_movie
-    puts "#{name} today  you are going to be screening a/an #{@genres.sample}!"
+    puts "#{@name} today  you are going to be screening a/an #{@genres.sample}!"
   end
 
-  def popcorn
-    puts "#{name} for your pleasure this screening comes with complementary popcorn!"
+  def popcorn(flavor)
+    puts "#{@name} for your pleasure this screening comes with complementary popcorn #{flavor}!"
   end
 
   def user_data
-    puts "#{name} you are #{age} years old and you have just watched a/an #{@genres.sample}! Please come again!"
+    puts "#{@name} you are #{age} years old and you have just watched a/an #{@genres.sample}! Please come again!"
   end
 end
 
 # driver code
-# movie = Movies.new("adrian", 12)
+# movie = Movies.new("adrian", 34)
+# puts "What flavor popcorn do you want"
+# choice = gets.chomp
+# puts movie.popcorn(choice)
 # p movie.age
 # p movie.name
 # p movie.age_verification
 # p movie.random_movie
-# p movie.popcorn
+# p movie.popcorn(choice)
 
 #  Modify your program so that it has a user interface (a user can interact with your program via the command line).
 #  Your user should be allowed to create as many instances of your class as they like.
@@ -78,15 +80,16 @@ answer = gets.chomp
             puts "How many movie screenings would you like to see?"
                 nmbr_of_screenings = gets.chomp.to_i
                 nmbr_of_screenings.times do
-                  puts "Please enter your information!(name,age)"
-                  name = gets.chomp.capitalize
-                  age = gets.chomp
-                  movies_array << Movies.new(name,age)
-                  puts "Would you like to see another movie?(yes/no)"
-                  answer = gets.chomp
+                  puts "Please enter your name:"
+                       @name = gets.chomp.capitalize.to_s
+                  puts "Please enter your age:"
+                       @age = gets.chomp.to_i
+                  movies_array << Movies.new(@name,@age)
                 end
-            end
-      else
+                  puts "Would you like to see another movie?(yes/no)"
+                 answer = gets.chomp
+                end
+           else
             puts "Maybe next time!"
       end
 
