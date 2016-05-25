@@ -35,5 +35,11 @@ var reversestring = ""
     return reversestring;
 }
 
-var firststring = reverseString("JavaScript");
-var secondstring = reverseString("Exploring")
+var string = reverseString("JavaScript");
+var string = reverseString("Exploring")
+if (1==1) {
+	console.log(string);
+}
+else {
+   console.log("String can't be reversed!");
+}
