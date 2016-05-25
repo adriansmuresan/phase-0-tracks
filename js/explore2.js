@@ -20,3 +20,20 @@
 // add each letter back into a string
 // print the result
 
+var string = "Hello"
+var reversestring = ""
+ for (i = string.length-1; i >= 0; i--) {
+     reversestring += string[i];
+ }
+ console.log(reversestring)
+
+ function reverseString(string) {
+ 	var reversestring = ""
+ 	for (i = string.length-1; i >= 0; i--) {
+     reversestring += string[i]; 
+ }
+    return reversestring;
+}
+
+var firststring = reverseString("JavaScript");
+var secondstring = reverseString("Exploring")
