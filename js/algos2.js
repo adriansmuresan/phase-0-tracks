@@ -33,9 +33,48 @@ function longestPhrase(strings) {
 console.log(longestPhrase(["long phrase","longest phrase","longer phrase"]));
 console.log(longestPhrase(["car", "bike", "trolly", "train"]))
 
+// -------Release 1: Find a Key-Value Match-------
+// write a function that takes two objects and checks to see if the objects share at least one key-value pair. 
+// (You'll keep adding to this file, so we suggest grouping functions at the top and testing at the bottom of the file.) 
+// If we called your function with {name: "Steven", age: 54} and {name: "Tamir", age: 54}, the function 
+// would return true, because at least one key-value pair matches between the two objects. If no pairs match 
+// (and keep in mind that the two objects may not even have any of the same keys), the function should 
+// return false. To make your life easier, don't worry about whether a property is a string ('age') or 
+// an identifier name (age). Those can be considered equivalent. Again, try to reason through the problem 
+// using the basics you've already learned, rather than looking up slick search functions that will do 
+// the job for you. We'd rather see you write code that you actually understand!
 
+// -----Pseudocode---------
+// create a function that iterates through an object and if the keys or values are the same returns true, othervise false
+// take two objects
+// iterate through the first object
+// iterate through the second object
+// compare the two objects
+// if condition is met then returns true
+// if not then false
 
+function compareObj(obj1, obj2){
+	keysObj1 = Object.keys(obj1);
+	keysObj2 = Object.keys(obj2);
+	for  ( i = 0; i < keysObj1.length ; i++) {
+		valObj1 = obj1[keysObj1[i]];
+		valObj2 = obj2[keysObj2[i]];
 
+		if ( keysObj1[i] === keysObj2[i]) {
+			if (valObj1 === valObj2) {
+				console.log( true + "--" + " This is the same key: " + keysObj1[i] + " This is the same value: " + valObj1 );
+			}
+			else {
+				console.log( false + "--" + " This is the same key: " + keysObj1[i] + " This values don't match: " + valObj1 + " " + valObj2);
+			}
+		}
+		else {
+			console.log(false + "--" + "This keys don't match.")
+		}
+	}
+}
 
-
+var obj1 = {name: "Steven", age: 54};
+var obj2 = {name: "Tamir", age: 54}
+compareObj(obj1,obj2);
 
