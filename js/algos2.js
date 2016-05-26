@@ -12,6 +12,30 @@
 // input a set of strings in an array
 // output the longest string from the array
 // break the array into individual strings
-// chesck the length of the string with the .length method and compare it eith the last string 
+// chesck the length of the string with the .length method and compare it with the last string 
 // iterate through the array
 // print the longest string
+
+function longestPhrase(strings) {
+	initialLength = 0;
+	longestString = "" ;
+	for (var i = 0; i < strings.length; i++) {
+		if (strings[i].length > initialLength) {
+			var initialLength = strings[i].length ;
+			longestString = strings[i] ;
+		}
+
+	}
+    return longestString
+}
+
+//  Driver code
+console.log(longestPhrase(["long phrase","longest phrase","longer phrase"]));
+console.log(longestPhrase(["car", "bike", "trolly", "train"]))
+
+
+
+
+
+
+
