@@ -1,7 +1,7 @@
 # Virus Predictor
 
-# I worked on this challenge [by myself, with: ].
-# We spent [#] hours on this challenge.
+# I worked on this challenge  with: Keith Pilson.
+# We spent 1.5 hours on this challenge.
 
 # EXPLANATION OF require_relative
 # require-relative in this case points to the file that is located in the same folder as oposed to require
@@ -102,3 +102,14 @@ STATE_DATA.each do |state,data|
 end
 #=======================================================================
 # Reflection Section
+
+# What are the differences between the two different hash syntaxes shown in the state_data file?
+# - the first set of keys is a string and the second one is a symbol
+# What does require_relative do? How is it different from require?
+# - require_relative points to the file that is located in the same folder as oposed to require
+# What are some ways to iterate through a hash?
+# - we can iterate using .each and .times
+# When refactoring virus_effects, what stood out to you about the variables, if anything?
+# - those variables are not required since they are initialized in the begining and are instance variables, available throught the class
+# What concept did you most solidify in this challenge?
+# - refactoring and making the code more DRY, the fact taht we don't need to call the variables all the time inside of the class
