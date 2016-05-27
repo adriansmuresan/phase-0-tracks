@@ -49,7 +49,7 @@ console.log(longestPhrase(["car", "bike", "trolly", "train"]))
 // take two objects
 // iterate through the first object
 // iterate through the second object
-// compare the two objects
+// compare the keys and values of the two objects
 // if condition is met then returns true
 // if not then false
 
@@ -77,4 +77,38 @@ function compareObj(obj1, obj2){
 var obj1 = {name: "Steven", age: 54};
 var obj2 = {name: "Tamir", age: 54}
 compareObj(obj1,obj2);
+
+
+// -------Release 2: Generate Random Test Data---------
+// Write a function that takes an integer for length, and builds and returns an array of strings of the 
+// given length. So if we ran your function with an argument of 3, we would get an array of 3 random 
+// words back (the words don't have to be actual sensical English words -- "nnnnfph" totally counts). 
+// The words should be of randomly varying length, with a minimum of 1 letter and a maximum of 10 letters. 
+// (This involves a new trick, generating a random number, that you'll have to look up, but the solution 
+// 	on how to do so is relatively straightforward.)
+
+ // -----------Pseudocode--------
+// create a function that takes input an integer for argument
+// create an array that stores some strings of given length( integer = string_length)
+// create a loop that makes an amount of words with length between 1 and 10
+// take the words created and add them to an array
+
+
+function generateRandom(integer) {
+	var arrayofStrings = [];
+	for (var i = 0 ; i < integer; i++)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
