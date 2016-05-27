@@ -29,10 +29,6 @@ function longestPhrase(strings) {
     return longestString
 }
 
-//  Driver code
-console.log(longestPhrase(["long phrase","longest phrase","longer phrase"]));
-console.log(longestPhrase(["car", "bike", "trolly", "train"]))
-
 // -------Release 1: Find a Key-Value Match-------
 // write a function that takes two objects and checks to see if the objects share at least one key-value pair. 
 // (You'll keep adding to this file, so we suggest grouping functions at the top and testing at the bottom of the file.) 
@@ -49,7 +45,7 @@ console.log(longestPhrase(["car", "bike", "trolly", "train"]))
 // take two objects
 // iterate through the first object
 // iterate through the second object
-// compare the two objects
+// compare the keys and values of the two objects
 // if condition is met then returns true
 // if not then false
 
@@ -74,7 +70,65 @@ function compareObj(obj1, obj2){
 	}
 }
 
+
+// -------Release 2: Generate Random Test Data---------
+// Write a function that takes an integer for length, and builds and returns an array of strings of the 
+// given length. So if we ran your function with an argument of 3, we would get an array of 3 random 
+// words back (the words don't have to be actual sensical English words -- "nnnnfph" totally counts). 
+// The words should be of randomly varying length, with a minimum of 1 letter and a maximum of 10 letters. 
+// (This involves a new trick, generating a random number, that you'll have to look up, but the solution 
+// 	on how to do so is relatively straightforward.)
+
+ // -----------Pseudocode--------
+// create a function that takes input an integer for argument
+// create an array that stores some strings of given length (integer)
+// create a loop that makes an amount of words with length between 1 and 10
+// take the words created and add them to an array
+
+
+function generateRandom(integer) {
+	var arrayofStrings = [];
+	for (var i = 0 ; i < integer; i++) {
+		var rand_word = "";
+		num = Math.floor((Math.random()*10)+1);
+		for (var x = 0; x < num; x++) {
+			alphabet = "abcdefghijklmnopqrstuvwxyz";
+			var letter = alphabet[Math.floor((Math.random()*26)+0)]
+			    rand_word += letter
+
+		}
+		arrayofStrings.push(rand_word)
+	}
+	return arrayofStrings
+}
+// Driver code
+console.log(longestPhrase(["long phrase","longest phrase","longer phrase"]));
+console.log(longestPhrase(["car", "bike", "trolly", "train"]))
+console.log("------------------------")
 var obj1 = {name: "Steven", age: 54};
 var obj2 = {name: "Tamir", age: 54}
 compareObj(obj1,obj2);
+console.log("-------------------------")
+console.log(generateRandom(7));
+console.log(generateRandom(10));
+console.log(generateRandom(2));
+
+// Add driver code that does the following 10 times: generates an array, prints the array, 
+// feeds the array to your "longest word" function, and prints the result.
+
+for (i = 0; i < 10 ; i++) {
+	var integer = Math.floor((Math.random()*10)+1);
+	var someArray = generateRandom(integer);
+	console.log(someArray);
+	var newlongestWord = longestPhrase(someArray);
+	console.log(newlongestWord);
+}
+
+
+
+
+
+
+
+
 
