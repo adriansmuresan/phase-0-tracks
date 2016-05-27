@@ -81,7 +81,7 @@ function compareObj(obj1, obj2){
 
  // -----------Pseudocode--------
 // create a function that takes input an integer for argument
-// create an array that stores some strings of given length( integer = string_length)
+// create an array that stores some strings of given length (integer)
 // create a loop that makes an amount of words with length between 1 and 10
 // take the words created and add them to an array
 
@@ -116,7 +116,13 @@ console.log(generateRandom(2));
 // Add driver code that does the following 10 times: generates an array, prints the array, 
 // feeds the array to your "longest word" function, and prints the result.
 
-
+for (i = 0; i < 10 ; i++) {
+	var integer = Math.floor((Math.random()*10)+1);
+	var someArray = generateRandom(integer);
+	console.log(someArray);
+	var newlongestWord = longestPhrase(someArray);
+	console.log(newlongestWord);
+}
 
 
 
