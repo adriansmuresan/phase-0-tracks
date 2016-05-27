@@ -29,10 +29,6 @@ function longestPhrase(strings) {
     return longestString
 }
 
-//  Driver code
-console.log(longestPhrase(["long phrase","longest phrase","longer phrase"]));
-console.log(longestPhrase(["car", "bike", "trolly", "train"]))
-
 // -------Release 1: Find a Key-Value Match-------
 // write a function that takes two objects and checks to see if the objects share at least one key-value pair. 
 // (You'll keep adding to this file, so we suggest grouping functions at the top and testing at the bottom of the file.) 
@@ -74,10 +70,6 @@ function compareObj(obj1, obj2){
 	}
 }
 
-var obj1 = {name: "Steven", age: 54};
-var obj2 = {name: "Tamir", age: 54}
-compareObj(obj1,obj2);
-
 
 // -------Release 2: Generate Random Test Data---------
 // Write a function that takes an integer for length, and builds and returns an array of strings of the 
@@ -96,11 +88,33 @@ compareObj(obj1,obj2);
 
 function generateRandom(integer) {
 	var arrayofStrings = [];
-	for (var i = 0 ; i < integer; i++)
+	for (var i = 0 ; i < integer; i++) {
+		var rand_word = "";
+		num = Math.floor((Math.random()*10)+1);
+		for (var x = 0; x < num; x++) {
+			alphabet = "abcdefghijklmnopqrstuvwxyz";
+			var letter = alphabet[Math.floor((Math.random()*26)+0)]
+			    rand_word += letter
+
+		}
+		arrayofStrings.push(rand_word)
+	}
+	return arrayofStrings
 }
+// Driver code
+console.log(longestPhrase(["long phrase","longest phrase","longer phrase"]));
+console.log(longestPhrase(["car", "bike", "trolly", "train"]))
+console.log("------------------------")
+var obj1 = {name: "Steven", age: 54};
+var obj2 = {name: "Tamir", age: 54}
+compareObj(obj1,obj2);
+console.log("-------------------------")
+console.log(generateRandom(7));
+console.log(generateRandom(10));
+console.log(generateRandom(2));
 
-
-
+// Add driver code that does the following 10 times: generates an array, prints the array, 
+// feeds the array to your "longest word" function, and prints the result.
 
 
 
