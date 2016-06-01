@@ -35,3 +35,14 @@ sqlite> SELECT * FROM books;
 4|The Goldfinch|784|true|2
 5|The Secret History|576|false|2
 <!-- Relese 3 -->
+sqlite> SELECT books.title, books.number_of_pages, books.availability, writers.name FROM books JOIN writers ON books.writer_id = writers.id;
+IT|1104|true|Stephen King
+Full Dark, No Stars|586|false|Stephen King
+The Goldfinch|784|true|Donna Tartt
+The Secret History|576|false|Donna Tartt
+
+sqlite> SELECT books.title, books.availability, writers.name FROM books JOIN writers ON books.writer_id = writers.id;
+IT|true|Stephen King
+Full Dark, No Stars|false|Stephen King
+The Goldfinch|true|Donna Tartt
+The Secret History|false|Donna Tartt
