@@ -1,0 +1,9 @@
+You've joined two tables before. How do you join three?
+
+sqlite> SELECT businesses.name,reviews.stars, reviews.comment, users.first_name FROM businesses JOIN reviews ON businesses.id = reviews.business_id JOIN users ON users.id = reviews.user_id;
+
+Grundy Hollow Wedding Chapel|4|great chapel|Mandy
+Amir's Towing|3|good service|Mandy
+The Beagle Nightclub|1|dumb music|Holly
+Lotus Yoga|5|very relaxing|Steven
+Plumbing by Janet|4|excelent work|Bradford
