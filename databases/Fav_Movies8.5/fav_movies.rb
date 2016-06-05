@@ -3,8 +3,6 @@
 # Create a program to add your personal favorite movies with rating and comments
 
 require 'sqlite3'
-require 'faker'
-
 
 @db = SQLite3::Database.new("movies.db")
 @db.results_as_hash = true
