@@ -53,6 +53,7 @@ def user_interface(db)
 			puts "Enter 3 to delete a movie!"
 			puts "Enter 4 to exit"
 			input = gets.chomp
+			
 			if input == "1"
 				puts "Plese enter the name/title of the movie you would like to add"
 	               name = gets.chomp
@@ -60,18 +61,22 @@ def user_interface(db)
 	              rating = gets.chomp
 	            puts "Please enter additional comments!"
 	              comments = gets.chomp
-				add_movies(db, name, rating, comments)
+				  add_movies(db, name, rating, comments)
+
 			elsif input == "2"
 				list_of_movies
+
 			elsif input == "3"
-	             puts "Please enter the name of the movie you would like to delete!"
-	             name = gets.chomp
-				delete_movie(db, name)
+	            puts "Please enter the name of the movie you would like to delete!"
+	              name = gets.chomp
+				  delete_movie(db, name)
+
 			elsif input == "4"
 				puts exit
 				break
 			end
 		end
+
 	else answer == "no"
 		puts exit
 	end
