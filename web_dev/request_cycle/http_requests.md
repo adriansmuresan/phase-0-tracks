@@ -49,3 +49,9 @@
    ### Uses for _GET_ and _POST_
 
    GET can be used to retrieve a web page and POST can be used to trigger email from a database.
+
+   ### What is a cookie? How does it relate to HTTP requests?
+
+   An HTTP Cookie is a piece of data sent from a website and stored in the user's browser in order to remember stateful information about browsing activity, items added to the shopping cart, pages visited in the past. They can also remember previous information entered such as names, addresses, passwords, credit card numbers.
+
+   Cookies are arbitrary pieces of data, usually chosen and first sent by the web server, and stored on the client computer by the web browser. The browser then sends them back to the server with every request, introducing states (memory of previous events) into otherwise stateless HTTP transactions. Without cookies, each retrieval of a web page or component of a web page would be an isolated event, largely unrelated to all other page views made by the user on the website.
