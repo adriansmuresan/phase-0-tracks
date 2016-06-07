@@ -1,7 +1,8 @@
 # 9.1 How the Web Works
 
 ## Release 0: View HTTP Requests
- ###What are some common HTTP status codes?
+ ### What are some common HTTP status codes?
+
    ** 1xx Informational**
      * 100 Continue
      * 101 Switching Protocols
@@ -29,4 +30,22 @@
       * 504 Gateway Timeout
 
   ### What is the difference between a GET request and a POST request? When might each be used?
-        
+   ** The _GET_ method **
+    * Requests data from a specified source
+    * GET requests can be cached
+    * GET requests remain in the browser history
+    * GET requests can be bookmarked
+    * GET requests have length restrictions
+    * GET requests should never be used when dealing with sensitive data
+    * GET requests should be used only to retrieve data
+
+  ** The _POST_ method **
+   * Submits data to be processed to a specified source
+   * POST requests are never cached
+   * POST requests do not remain in the browser history
+   * POST requests cannot be bookmarked
+   * POST requests have no restriction on data length
+
+   ### Uses for _GET_ and _POST_
+
+   GET can be used to retrieve a web page and POST can be used to trigger email from a database.
