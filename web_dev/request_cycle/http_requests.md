@@ -4,52 +4,52 @@
 
 ### What are some common HTTP status codes?
 
-   **1xx Informational**
+ **1xx Informational**
 
-     * 100 Continue
-     * 101 Switching Protocols
-     * 102 Processing(WebDAV)
-     
-   **2xx Success**
+  * 100 Continue
+  * 101 Switching Protocols
+  * 102 Processing(WebDAV)
 
-     * 200 OK
-     * 201 Created
-     * 204 No Content
+ **2xx Success**
 
-   **3xx Redirection**
+  * 200 OK
+  * 201 Created
+  * 204 No Content
 
-     * 300 Multiple Choices
-     * 304 Not Modified
-     * 302 Found
-     * 305 Use Proxy
+ **3xx Redirection**
 
-   **4xx Client Error**
+  * 300 Multiple Choices
+  * 304 Not Modified
+  * 302 Found
+  * 305 Use Proxy
 
-     * 400 Bad Request
-     * 401 Unauthorized
-     * 403 Forbidden  
-     * 404 Not Found
-     * 409 Conflict
+ **4xx Client Error**
 
-   **5xx Server Error**
+  * 400 Bad Request
+  * 401 Unauthorized
+  * 403 Forbidden  
+  * 404 Not Found
+  * 409 Conflict
 
-      * 500 Internal Server Error
-      * 501 Not Implemented
-      * 502 Bad Gateway
-      * 503 service Unavailable
-      * 504 Gateway Timeout
+ **5xx Server Error**
+
+  * 500 Internal Server Error
+  * 501 Not Implemented
+  * 502 Bad Gateway
+  * 503 service Unavailable
+  * 504 Gateway Timeout
 
 ### What is the difference between a GET request and a POST request? When might each be used?
 
-   **The _GET_ method**
+ **The _GET_ method**
 
-    * Requests data from a specified source
-    * GET requests can be cached
-    * GET requests remain in the browser history
-    * GET requests can be bookmarked
-    * GET requests have length restrictions
-    * GET requests should never be used when dealing with sensitive data
-    * GET requests should be used only to retrieve data
+  * Requests data from a specified source
+  * GET requests can be cached
+  * GET requests remain in the browser history
+  * GET requests can be bookmarked
+  * GET requests have length restrictions
+  * GET requests should never be used when dealing with sensitive data
+  * GET requests should be used only to retrieve data
 
   **The _POST_ method**
 
