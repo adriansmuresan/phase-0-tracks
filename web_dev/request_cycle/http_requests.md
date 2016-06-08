@@ -2,13 +2,14 @@
 
 ## Release 0: View HTTP Requests
 
- ### What are some common HTTP status codes?
+### What are some common HTTP status codes?
 
    **1xx Informational**
 
      * 100 Continue
      * 101 Switching Protocols
      * 102 Processing(WebDAV)
+     
    **2xx Success**
 
      * 200 OK
@@ -38,7 +39,7 @@
       * 503 service Unavailable
       * 504 Gateway Timeout
 
-  ### What is the difference between a GET request and a POST request? When might each be used?
+### What is the difference between a GET request and a POST request? When might each be used?
 
    **The _GET_ method**
 
@@ -58,11 +59,11 @@
    * POST requests cannot be bookmarked
    * POST requests have no restriction on data length
 
-   #### Uses for _GET_ and _POST_
+#### Uses for _GET_ and _POST_
 
    GET can be used to retrieve a web page and POST can be used to trigger email from a database.
 
-   #### What is a cookie? How does it relate to HTTP requests?
+#### What is a cookie? How does it relate to HTTP requests?
 
    An HTTP Cookie is a piece of data sent from a website and stored in the user's browser in order to remember stateful information about browsing activity, items added to the shopping cart, pages visited in the past. They can also remember previous information entered such as names, addresses, passwords, credit card numbers.
 
