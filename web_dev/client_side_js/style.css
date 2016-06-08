@@ -1,4 +1,10 @@
-#lizard-photo {
-  width: 225px;
-  height: auto;
+.headers {
+  background-color: cyan;
+}
+
+#one {
+  color: orange;
+}
+#two {
+  color: green;
 }
