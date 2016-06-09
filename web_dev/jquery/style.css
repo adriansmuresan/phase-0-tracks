@@ -1,0 +1,18 @@
+h1, h2 {
+	color: grey;
+}
+
+h3 {
+	color: green;s
+}
+
+body {
+	background-color: #e3e0cc;
+	margin: 3%;
+}
+
+.test1 {
+	font-family: Helvetica;
+	font-style: italic;
+}
+
