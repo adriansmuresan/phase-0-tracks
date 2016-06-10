@@ -45,6 +45,8 @@ get '/students/:id' do
   student.to_s
 end
 
+# Release 0: Add Routes
+
 # Update it with the following:
 
 # A /contact route that displays an address (you can make up the address).
@@ -75,9 +77,26 @@ get '/:number1/plus/:number2' do
   first = params[:number1]
   second = params[:number2]
   result = (first.to_i + second.to_i).to_s
-  result
+  "#{first} + #{second} = #{result}"
 end
 
+# Optional bonus: Make a route that allows the user to search the database in 
+# some way -- maybe for students who have a certain first name, or some other 
+# attribute. If you like, you can simply modify the home page to take a query 
+# parameter, and filter the students displayed if a query parameter is present.
 
+# Get route that retrieves students by age
+# /student_age/:age
 
-
+get "/student_age/:age" do
+  age = params[:age]
+  "#{age}"
+  students = db.execute("SELECT id,name, campus FROM students WHERE age=?", [age])
+  response = ""
+  students.each do |student|
+    response << "ID : #{student['id']}<br>"
+    response << "Name : #{student['name']}<br>"
+    response << "Campus : #{student['campus']}<br>"
+  end
+  response
+end
