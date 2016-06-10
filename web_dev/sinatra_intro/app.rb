@@ -69,7 +69,14 @@ end
 
 # A route that uses route parameters to add two numbers and respond with the 
 # result. The data types are tricky here -- when will the data need to be 
-# (or arrive as) a string?  
+# (or arrive as) a string? 
+
+get '/:number1/plus/:number2' do
+  first = params[:number1]
+  second = params[:number2]
+  result = (first.to_i + second.to_i).to_s
+  result
+end
 
 
 
